@@ -18,7 +18,7 @@ pipeline{
            }
          stage('Result'){
            steps{
-             input ('Do you want to continue result')
+             input ('Do you want to continue result!!!')
              junit '**/target/surefire-reports/TEST-*.xml'
                     archive 'target/*.jar'
            }
