@@ -1,6 +1,11 @@
 pipeline{
   agent any
        stages{
+         stage("checkout"){
+           steps{
+             echo "Checkoot SCM"
+           }
+         }
          stage('build'){
            steps{
              bat 'mvn install'
@@ -16,6 +21,7 @@ pipeline{
                bat 'mvn test'
              }
            }
+         
          stage('Result'){
            steps{
              input ('Do you want to continue result!!!')
